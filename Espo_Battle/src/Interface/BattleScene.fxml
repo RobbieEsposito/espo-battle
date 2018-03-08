@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+
+<GridPane fx:controller="Interface.BattleController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <Button text="Quit" GridPane.columnIndex="0" GridPane.rowIndex="0"
+            onAction="#goToLauncher"/>
+    <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="0" minHeight="130" minWidth="200">
+                <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="Element" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label text="HP" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            </GridPane>
+            <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="1" minHeight="130" minWidth="200">
+                <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="Element" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label text="HP" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            </GridPane>
+        </GridPane>
+        <TextArea fx:id="txt_log" GridPane.columnIndex="1" GridPane.rowIndex="0" minHeight="260" prefWidth="200"
+                  wrapText="true" editable="false"/>
+    </GridPane>
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="2" spacing="10" alignment="CENTER">
+        <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        <Button fx:id="btn_move1" text="Move 1"/>
+        <Button fx:id="btn_move2" text="Move 2"/>
+        <Button fx:id="btn_move3" text="Move 3"/>
+        <Button fx:id="btn_move4" text="Move 4"/>
+        <Button fx:id="btn_move5" text="Move 5"/>
+    </HBox>
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="3" spacing="10" alignment="CENTER">
+        <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        <Button text="Switch 1"/>
+        <Button text="Switch 2"/>
+        <Button text="Switch 3"/>
+        <Button text="Switch 4"/>
+        <Button text="Switch 5"/>
+    </HBox>
+</GridPane>

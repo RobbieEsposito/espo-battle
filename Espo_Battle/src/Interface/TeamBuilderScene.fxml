@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ChoiceBox?>
+
+<GridPane fx:controller="Interface.TeamBuilderController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <Button text="Back" GridPane.columnIndex="0" GridPane.rowIndex="0"
+            onAction="#goToLauncher"/>
+    <!-- Creature Builder -->
+    <GridPane alignment="center" hgap="10" vgap="10"
+              GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+        <Text text="Team Builder" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+            <font>
+                <Font name="Tahoma" size="20"/>
+            </font>
+        </Text>
+        <Label text="Species:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="cb_species" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Build:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ChoiceBox fx:id="cb_build" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Move 1:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="cb_move1" GridPane.columnIndex="1" GridPane.rowIndex="3" minWidth="130"/>
+        <Button text="Save" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                onAction="#saveCreature"/>
+    </GridPane>
+    <!-- Party -->
+    <GridPane hgap="5" vgap="5"
+              GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+        <columnConstraints>
+            <ColumnConstraints minWidth="60" halignment="CENTER"/>
+            <ColumnConstraints minWidth="60" halignment="CENTER"/>
+            <ColumnConstraints minWidth="60" halignment="CENTER"/>
+            <ColumnConstraints minWidth="60" halignment="CENTER"/>
+            <ColumnConstraints minWidth="60" halignment="CENTER"/>
+        </columnConstraints>
+        <Text text="Party" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+            <font>
+                <Font name="Tahoma" size="20"/>
+            </font>
+        </Text>
+        <Label fx:id="lbl_creature1" text="Undefined" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button fx:id="btn_edit1" text="Edit" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="lbl_creature2" text="Undefined" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button fx:id="btn_edit2" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label fx:id="lbl_creature3" text="Undefined" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Button fx:id="btn_edit3" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Label fx:id="lbl_creature4" text="Undefined" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Button fx:id="btn_edit4" text="Edit" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <Label fx:id="lbl_creature5" text="Undefined" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <Button fx:id="btn_edit5" text="Edit" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+    </GridPane>
+</GridPane>

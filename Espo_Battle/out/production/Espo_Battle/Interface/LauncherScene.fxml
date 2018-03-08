@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="Interface.LauncherController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <Button text="Build" GridPane.columnIndex="0" GridPane.rowIndex="0"
+            onAction="#goToTeamBuilder"/>
+    <Button text="Battle" GridPane.columnIndex="0" GridPane.rowIndex="1"
+            onAction="#goToBattle"/>
+</GridPane>
